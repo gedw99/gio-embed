@@ -33,9 +33,9 @@ However really any Widget can be loaded this way.
 One loose coupled way is to use an SSR server such as at https://github.com/yuriizinets/kyoto to enable simple Go Templates to be involved in the loading of Embedded modules as needed, such that they can be easily configured on the Server without recompiling.
 
 
-## Loading
+## Screen Loading
 
-Relies on the Intersection Web API at https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API, to know when to load, allowing late binding, and avoiding large initialy laods.
+Relies on the Intersection Web API at https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API, to know when to load, allowing late binding, and avoiding large initialy downloads.
 
 https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility provides analytics also.
 
@@ -46,7 +46,7 @@ This late loading functionality can be used not just in Web, but also Native app
 Native apps can use a WebView or they can employ the an embededed WASM Runtime. The Webview is the initialy roadmap target, and then the WASM based loaded.
 
 
-## Positiining
+## Screen Positioning
 
 All GIOUI Widgets must output their dimensions, as the same contract is used for this. 
 
