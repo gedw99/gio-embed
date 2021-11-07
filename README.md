@@ -32,6 +32,8 @@ However really any Widget can be loaded this way.
 
 One loose coupled way is to use an SSR server such as at https://github.com/yuriizinets/kyoto to enable simple Go Templates to be involved in the loading of Embedded modules as needed, such that they can be easily configured on the Server without recompiling.
 
+This also allows Contextual loading of data fromthe backend specific to the User. 
+
 
 ## Screen Loading
 
