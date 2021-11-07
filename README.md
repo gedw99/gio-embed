@@ -4,35 +4,34 @@ GIOUI is a golang based GUI platform at https://github.com/gioui
 
 **gio-embed** is based on the open standard https://oembed.com/, and allows GIOUI Widgets ( and hence functionality ) to be loaded and embedded into the Canavs at runtime.
 
-These can come from your servers, or any other Servers. A example Registry of providers is at https://oembed.com/providers.json, however, it is likely that a Well Known URI standard will be created for GIOIO embeddable Widgets.
+These can come from your servers, or any other Servers. A example Registry of providers is at https://oembed.com/providers.json, however, it is likely that a Well Known URI standard will be created for GIOIO embeddable Widgets, as well as a JSONSchema to describe them.
 
-The aim is that a GIOUI Embeddable Widget is exactly the same as a standard GIOUI widget in terms of its golang code. 
-A GIOUI loader that deals with loading a GIO Embeddable Widget that has been compiled to WASM needs to be developed.
-The GIOUI Embedded Widget can then be compiled to WASM and exposed via a Web Server for the GIOUI Loader to load and embed into the App.
+The aim is that an GIOUI Embedd Widget is exactly the same as a standard GIOUI widget in terms of its golang code. 
+A GIOUI loader that deals with loading and displaying a GIOUI Embed Widget that has been compiled to WASM needs to be developed.
+The GIOUI Embed Widget can then be compiled to WASM and exposed via a Web Server for the GIOUI Loader to load and embed into the App.
 
 ## Features
 
 - Lowers size of initial download.
 
-- Allows Modularity in that Apps can be constructed as MicroServices, to build large applications out of small Widgets.
+- Allows Modularity in that Apps can be constructed as MicroServices, to build large applications out of other GIOUI Widgets.
 
-- Allows discovery at runtime, allowing different functioality to be provided based on different Contexts such as Feature Flags, Locations, or anything. 
+- Allows discovery at runtime, allowing different functionality and/or data to be provided based on different Contexts such as Feature Flags, Locale, or anything. 
   - Here is a simple Feature Flags golang system that could mate with this at: https://github.com/thomaspoignant/go-feature-flag
 
-
 ## Examples
+
+Any Widget can be loaded this way, but simple examples are:
 
 - Chat
 - Video Player
 - etc
 
-However really any Widget can be loaded this way.
-
 ## Backend 
 
-One loose coupled way is to use an SSR server such as at https://github.com/yuriizinets/kyoto to enable simple Go Templates to be involved in the loading of Embedded modules as needed, such that they can be easily configured on the Server without recompiling.
+One loose coupled way is to use an SSR server such as at https://github.com/yuriizinets/kyoto to enable simple Go Templates to be involved in the request for a GIOUI Widget as needed, such that they can be easily configured on the Server without recompiling.
 
-This also allows Contextual loading of data fromthe backend specific to the User. 
+This also allows Contextual loading of data from the backend specific to the User at Runtime.
 
 
 ## Screen Loading
