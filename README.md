@@ -45,6 +45,8 @@ A GIOUI loader package is responsible for loading and displaying the GIOUI Embed
 
 ## Screen Loading
 
+The following relies on the DOM. GIOUI Embed Widget loader uses the ability to pick a DOM div tag to load the Widget into.
+
 Relies on the Intersection Web API at https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API, to know when to load, allowing late binding, and avoiding large initialy downloads.
 
 https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility provides analytics also.
